@@ -1,0 +1,193 @@
+﻿@model TotalSquash.Models.User
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>User</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.id, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.id)
+                @Html.ValidationMessageFor(model => model.id)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.username, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.username)
+                @Html.ValidationMessageFor(model => model.username)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.skillId, "skillId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("skillId", String.Empty)
+                @Html.ValidationMessageFor(model => model.skillId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.password, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.password)
+                @Html.ValidationMessageFor(model => model.password)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.photo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.photo)
+                @Html.ValidationMessageFor(model => model.photo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.wins, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.wins)
+                @Html.ValidationMessageFor(model => model.wins)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.losses, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.losses)
+                @Html.ValidationMessageFor(model => model.losses)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ties, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ties)
+                @Html.ValidationMessageFor(model => model.ties)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.firstName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.firstName)
+                @Html.ValidationMessageFor(model => model.firstName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.lastName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.lastName)
+                @Html.ValidationMessageFor(model => model.lastName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.streetAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.streetAddress)
+                @Html.ValidationMessageFor(model => model.streetAddress)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.city, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.city)
+                @Html.ValidationMessageFor(model => model.city)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.provinceId, "provinceId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("provinceId", String.Empty)
+                @Html.ValidationMessageFor(model => model.provinceId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.countryId, "countryId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("countryId", String.Empty)
+                @Html.ValidationMessageFor(model => model.countryId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.phoneNumber, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.phoneNumber)
+                @Html.ValidationMessageFor(model => model.phoneNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.emailAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.emailAddress)
+                @Html.ValidationMessageFor(model => model.emailAddress)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.gender, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.gender)
+                @Html.ValidationMessageFor(model => model.gender)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.birthDate, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.birthDate)
+                @Html.ValidationMessageFor(model => model.birthDate)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.accountId, "accountId", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("accountId", String.Empty)
+                @Html.ValidationMessageFor(model => model.accountId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.locked, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.locked)
+                @Html.ValidationMessageFor(model => model.locked)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
